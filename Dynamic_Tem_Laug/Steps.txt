@@ -1,0 +1,72 @@
+dynamic template files=>
+in this python variable display to the frentEnd this code usefull
+template variable access code  <python code dictanary>
+activate virtual env =>
+>>> django-admin startproject <project_name>
+>>> go through manage.py=> 
+>>> manage.py startapp <appname>
+then go to settings.py
+======================
+then register app in Intalled app> course,fees 
+write=> 
+TEMPLATE_DIR = BASE_DIR/'templates'
+==============================
+and register=>
+'DIRS': [TEMPLATE_DIR],
+==============================
+then views.py=>
+from django.shortcuts import render
+
+def Courses_Details(request):
+    Coursename = {'cname':'Django Rest Framework'}
+    return render(request,'course.html',context=Coursename)
+
+==============================
+then new file course.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Hello ....{{cname}}</h1>
+</body>
+</html>
+==============================
+
+urls.py=>
+----------
+from course import views
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('course/',views.Courses_Details),
+]
+===============================
+
+changed 
+------
+
+from django.shortcuts import render
+
+def Courses_Details(request):
+    name = 'Amol Aptil'
+    job = 'AWS Consultant'
+    company = 'Cognizant India Pvt Ltd'
+    Django_details = {'nm':name,'jb':job, 'cmpn':company}
+    return render(request,'course.html',context=Django_details)
+
+-----------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Congrat..Name:-{{nm}},
+    Disgnations :- {{jb}},
+    Company :- {{cmpn}} </h1>
+</body>
+</html>
+
