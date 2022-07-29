@@ -1,0 +1,29 @@
+forms.py
+======
+from django import forms
+
+class Student_Registration(forms.Form):
+    name = forms.CharField(widget=forms.PasswordInput())
+===========
+from django import forms
+
+class Student_Registration(forms.Form):
+    name = forms.CharField(widget=forms.HiddenInput)
+=======================
+from django import forms
+
+class Student_Registration(forms.Form):
+    name = forms.CharField(widget=forms.Textarea)
+======================
+from django import forms
+
+class Student_Registration(forms.Form):
+    name = forms.CharField(widget=forms.CheckboxInput)
+==================
+from django import forms
+
+class Student_Registration(forms.Form):
+    name = forms.CharField(widget=forms.FileInput)
+============
+
+
