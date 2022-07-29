@@ -1,0 +1,22 @@
+django-admin startproject <projectname>
+copyapp last project 
+-------------------
+forms.py 
+views.py
+template file (html)
+urls.py 
+main urls.py 
+runserver
+----------------------
+then ordering form field
+----------------------
+views.py
+------------
+from django.shortcuts import render
+from .forms import Student_Registration
+
+
+def shoeformsdata(request):
+    FM = Student_Registration()
+    FM.order_fields(field_order= ['email','name'])
+    return render(request,'enroll/registrations.html',{'forms':FM})
