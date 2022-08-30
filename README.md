@@ -2,15 +2,15 @@
 Adv Django Projects
 Impliment end to end some project
 
-function Based view
+1}function Based view
 
-Dyanamic Templete Lag.
+2}Dyanamic Templete Lag.
 
-Static files
+3}Static files
 
-ORM_ Model
+4}ORM_ Model
 
-DB_User
+5}DB_User
 
-Form_Model
+6}Form_Model
 
